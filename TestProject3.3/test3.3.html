@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="res:global.css">
+    <style>
+
+    body{background:#fff; color:#000;}
+    @media (prefers-color-scheme:dark)
+    {body{background:#333; color:#eee;}}
+
+      div.frame{display:grid; grid-template-columns:1fr 1fr; grid-gap:20px; padding:20px; max-width: 1200px; margin: 0 auto;}
+
+      div.element{background:rgba(0,120,255,0.5); min-height:200px;}
+      div.spanned{grid-column-start:1; grid-column-end:3; grid-row-start:2; grid-row-end:4;}
+      div.aligned{align-self:start; justify-self:start;}
+
+      @media screen and (width<1000px)
+        {div.frame{grid-template-columns:1fr 1fr}}
+
+      @media screen and (width<600px)
+        {div.frame{grid-template-columns: 1fr;}}
+
+    </style>
+  </head>
+
+  <body>
+  <div class="frame">
+
+
+  <div class="element"></div>
+
+  <div class="element"></div>
+
+  <div class="element"></div>
+
+  <div class="element"></div>
+
+
+  </div>
+
+  </body>
+</html>
